@@ -1,0 +1,24 @@
+Powball
+
+A breakout game by imisrac
+Version 1.0
+
+Ez egy breakout játék.
+-Alapvető mozgásokkal
+-Alap szabályozással
+-A spriteok képekkel jelennek meg
+-Nem szaggat
+-Egy labda
+-Egyfajta téglázat
+-Konstans sebesség (labda, ütő)
+-Játék végén üzenet
+
+Továbbfejlesztési lehetőségek
+-Szabályozás finomítása
+-Menü
+-Lehetőség újra játszásra
+-Szintek bevezetése
+	+Több labda
+	+Gyorsuló labda
+	+Kisebb ütő méret
+-Extra téglák bevezetése
