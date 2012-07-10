@@ -6,6 +6,7 @@ import java.awt.Graphics;
 import java.awt.Toolkit;
 import java.util.Timer;
 import java.util.TimerTask;
+import java.util.Vector;
 
 import javax.swing.JPanel;
 
@@ -15,7 +16,7 @@ public class GamePanel extends JPanel implements Runnable {
 	protected Paddle mypaddle;
 	protected Timer timer;
 	protected Ball myball;
-	protected Brick bricks[];
+	protected Vector<Brick> bricks;
 	protected boolean ingame;
 	private String message = new String();
 	
@@ -39,15 +40,14 @@ public class GamePanel extends JPanel implements Runnable {
 	private void initGame() {
 		this.mypaddle = new Paddle();
 		this.myball = new Ball();
-		this.bricks = new Brick[24];
+		this.bricks = new Vector<Brick>();
 		this.ingame = true;
-		int k = 0;
-		for (int i=0;i<8;i++)
+		for (int i=0;i<Main.windowX-125;i=i+125)
 		{
 			for (int j=0;j<3;j++)
 			{
-				bricks[k] = new Brick(i*125, j*30);
-				k++;
+				Brick b = new Brick(i, j*30);
+				bricks.add(b);
 			}
 		}
 		this.timer = new Timer();

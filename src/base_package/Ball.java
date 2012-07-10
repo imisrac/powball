@@ -64,11 +64,11 @@ public class Ball extends Sprite implements Runnable {
 		this.x += this.dx;
 		this.y += this.dy;
 		
-		if (x<=0 || x+width>=Main.windowX)
+		if (x<=1 || x+width>=Main.windowX)
 		{
 			dx=-1*dx;
 		}
-		if (y<=0)
+		if (y<=1)
 		{
 			dy=1;
 		}

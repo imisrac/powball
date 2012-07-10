@@ -3,6 +3,8 @@
  */
 package base_package;
 
+import java.awt.Toolkit;
+
 import javax.swing.JFrame;
 
 /**
@@ -11,7 +13,7 @@ import javax.swing.JFrame;
  */
 public class Main {
 
-	protected static int windowX = 1000, windowY = 750;
+	protected static int windowX = (int)Toolkit.getDefaultToolkit().getScreenSize().getWidth()-200, windowY = (int)Toolkit.getDefaultToolkit().getScreenSize().getHeight()-200;
 	protected static JFrame mainFrame;
 	
 	/**
